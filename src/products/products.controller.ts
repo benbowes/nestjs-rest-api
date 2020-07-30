@@ -21,8 +21,8 @@ export class ProductsController {
   }
 
   @Get(':id')
-  findOne(@Param() param): Promise<Product> {
-    return this.productsService.findOne(param.id);
+  findOne(@Param('id') id: string): Promise<Product> {
+    return this.productsService.findOne(id);
   }
 
   @Post()
@@ -31,15 +31,15 @@ export class ProductsController {
   }
 
   @Delete(':id')
-  delete(@Param() param): Promise<Product> {
-    return this.productsService.delete(param.id);
+  delete(@Param('id') id: string): Promise<Product> {
+    return this.productsService.delete(id);
   }
 
   @Put(':id')
   update(
-    @Param() param,
+    @Param('id') id: string,
     @Body() updateProductDto: CreateProductDto,
   ): Promise<Product> {
-    return this.productsService.update(param.id, updateProductDto);
+    return this.productsService.update(id, updateProductDto);
   }
 }
