@@ -4,7 +4,13 @@ A CRUD REST API using the NestJS framework and MongoDB/Mongoose.
 
 ## Setup
 
-Add your mongodb uri to the "config/keys.ts file"
+Create a `.env` file in the root of the project with your mongodb uri
+
+e.g.
+
+```
+DB_CONNECTION_STRING=mongodb+srv://<USERNAME>:<PASSWORD>@<URL>/<DATABASE_NAME>?retryWrites=true&w=majority
+```
 
 ## Installation
 
