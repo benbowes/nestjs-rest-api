@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 export default {
-  mongoURI: 'CONNECTION_STRING',
+  mongoURI: process.env.DB_CONNECTION_STRING,
 };
