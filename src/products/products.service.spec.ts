@@ -7,7 +7,7 @@ import DbModule, {
   closeMongoConnection,
 } from '../../test/utils/db-test-module';
 
-describe('TestService', () => {
+describe('ProductService', () => {
   let service: ProductsService;
   let connection: Connection;
 
